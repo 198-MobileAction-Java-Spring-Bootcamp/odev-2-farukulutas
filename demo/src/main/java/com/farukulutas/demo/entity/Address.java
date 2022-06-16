@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -22,24 +23,24 @@ public class Address {
     @Column(name = "ADDRESS_NAME", length = 50, nullable = false)
     private String addressName;
 
-    @Column(name = "COUNTRY", nullable = false)
+    @OneToOne
     private Country country;
 
-    @Column(name = "CITY", nullable = false)
+    @OneToOne
     private City city;
 
-    @Column(name = "DISTRICT", nullable = false)
+    @OneToOne
     private District district;
 
-    @Column(name = "NEIGHBOURHOOD", nullable = false)
+    @OneToOne
     private Neighbourhood neighbourhood;
 
-    @Column(name = "STREET", nullable = false)
+    @OneToOne
     private Street street;
 
-    @Column(name = "DOOR_NO", nullable = false)
+    @OneToOne
     private DoorNumber doorNo;
 
-    @Column(name = "APARTMENT_NO", nullable = false)
+    @OneToOne
     private ApartmentNumber apartmentNo;
 }

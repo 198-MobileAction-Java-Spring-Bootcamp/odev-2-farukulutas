@@ -1,5 +1,7 @@
 package com.farukulutas.demo.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,12 +25,12 @@ public class City {
     @Column(name = "CITY_NAME", length = 85, nullable = false)
     private String cityName;
 
-    @Column(name = "PLATE", length = 10, nullable = false)
+    @Column(name = "PLATE", nullable = false)
     private int plate;
 
     @OneToMany
     @Column(name = "DISTRICT", nullable = false)
-    private District district;
+    private List<District> district;
 
     public City orElseThrow() {
         return null;

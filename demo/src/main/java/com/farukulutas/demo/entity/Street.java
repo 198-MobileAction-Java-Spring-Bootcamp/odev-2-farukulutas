@@ -24,6 +24,5 @@ public class Street {
     private String streetName;
 
     @ManyToOne
-    @Column(name = "NEIGHBOURHOOD", nullable = false)
     private Neighbourhood neighbourhood;
 }

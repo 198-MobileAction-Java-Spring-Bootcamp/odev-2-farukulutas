@@ -19,6 +19,6 @@ public class ApartmentNumber {
     @GeneratedValue(generator = "ApartmentNumber")
     private Long id;
 
-    @Column(name = "APARTMENT_NO", nullable = false)
+    @Column(name = "APARTMENT_NO")
     private int apartmentNo;
 }

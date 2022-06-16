@@ -1,5 +1,7 @@
 package com.farukulutas.demo.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,10 +28,9 @@ public class District {
 
     @OneToMany
     @Column(name = "NEIGHBOURHOOD", nullable = false)
-    private Neighbourhood neighbourhood;
+    private List<Neighbourhood> neighbourhood;
 
     @ManyToOne
-    @Column(name = "CITY", nullable = false)
     private City city;
 
 }
